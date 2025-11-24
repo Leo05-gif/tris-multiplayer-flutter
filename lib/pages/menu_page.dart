@@ -1,5 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:trismp/data/notifiers.dart';
+
+import 'game_page.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -30,14 +34,21 @@ class _MenuPageState extends State<MenuPage> {
           children: [
             TextButton(
               onPressed: () {
-                print("start");
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return GamePage();
+                    },
+                  ),
+                );
               },
               child: Text("Play"),
             ),
             SizedBox(height: 10),
             TextButton(
               onPressed: () {
-                print("quit");
+                exit(0);
               },
               child: Text("Quit"),
             ),
