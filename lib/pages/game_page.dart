@@ -10,6 +10,12 @@ class GamePage extends StatefulWidget {
   State<GamePage> createState() => _GamePageState();
 }
 
+List<List<String>> gameBoard = [
+  ["", "", ""],
+  ["", "", ""],
+  ["", "", ""],
+];
+
 class _GamePageState extends State<GamePage> {
   @override
   Widget build(BuildContext context) {
